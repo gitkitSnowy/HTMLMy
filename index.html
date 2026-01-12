@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>🔧 АДМИН ПАНЕЛЬ - Ultimate Universe</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -15,6 +16,7 @@
             background: linear-gradient(135deg, #0a0a0f, #1a1a2e);
             color: white;
             min-height: 100vh;
+            padding: 20px;
         }
 
         .container {
@@ -41,7 +43,6 @@
             margin-bottom: 15px;
         }
 
-        /* Контроль читов */
         .control-panel {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -65,7 +66,6 @@
             gap: 10px;
         }
 
-        /* Обновление скрипта */
         .update-section {
             background: rgba(0, 0, 0, 0.5);
             padding: 30px;
@@ -87,7 +87,6 @@
             margin-bottom: 15px;
         }
 
-        /* Кнопки */
         .btn {
             padding: 15px 30px;
             border: none;
@@ -118,7 +117,6 @@
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
         }
 
-        /* Глобальные уведомления */
         .notification-panel {
             background: rgba(0, 0, 0, 0.5);
             padding: 25px;
@@ -141,7 +139,6 @@
             margin-top: 10px;
         }
 
-        /* Бан игроков */
         .ban-panel {
             background: rgba(255, 118, 117, 0.1);
             padding: 25px;
@@ -149,7 +146,6 @@
             border: 2px solid #ff7675;
         }
 
-        /* Статус */
         .status {
             position: fixed;
             bottom: 20px;
@@ -245,12 +241,9 @@
         </div>
     </div>
 
-    <div class="status" id="statusMessage">Готово</div>
+    <div class="status" id="statusMessage" style="display: none;">Готово</div>
 
     <script>
-        // Здесь будет JavaScript для связи с Roblox
-        // через WebSockets или HTTP запросы
-        
         function updateScript() {
             const code = document.getElementById('scriptCode').value;
             showStatus('Скрипт обновлен для всех игроков!');
